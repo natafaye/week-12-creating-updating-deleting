@@ -8,11 +8,24 @@
 </head>
 <body>
     <div class="container mt-5">
+        <!-- Movies -->
         <button onclick="onFetchMoviesClick()" class="btn btn-primary btn-lg">Fetch Movies</button>
         <button onclick="onCreateMovieClick()" class="btn btn-success mx-3 btn-lg">Create Test Movie</button>
         <button onclick="onUpdateMovieClick()" class="btn btn-primary btn-lg">Update Test Movie</button>
         <button onclick="onDeleteMovieClick()" class="btn btn-danger mx-3 btn-lg">Delete Test Movie</button>
         <div id="movies-container"></div>
+
+        <hr class="my-5"/>
+
+        <!-- Genres -->
+        <div class="d-flex text-nowrap">
+            <button onclick="onFetchGenresClick()" class="btn btn-primary btn-lg">Fetch Genres</button>
+            <button onclick="onCreateGenreClick()" class="btn btn-success mx-3 btn-lg">Create Test Genre</button>
+            <input type="text" id="genre-id-textbox" placeholder="id to update/delete" class="form-control me-3"/>
+            <button onclick="onUpdateGenreClick()" class="btn btn-primary btn-lg">Update Genre</button>
+            <button onclick="onDeleteGenreClick()" class="btn btn-danger mx-3 btn-lg">Delete Genre</button>
+        </div>
+        <div id="genres-container" class="mt-3"></div>
     </div>
     <script src="index.js"></script>
 </body>

@@ -64,3 +64,43 @@ async function onDeleteMovieClick() {
         method: "DELETE", // delete
     })
 }
+
+/***** GENRES *****/
+
+const genresContainer = document.getElementById("genres-container")
+const genreIdTextbox = document.getElementById("genre-id-textbox")
+
+async function onFetchGenresClick() {
+    const response = await fetch("http://localhost:3005/genres")
+    const genreList = await response.json()
+
+    genresContainer.innerHTML = genreList.map(
+        genre => `<div class="bg-light rounded mt-5">
+            <h3>${genre.title}</h3>
+            <p>id: ${genre.id}</p>
+        </div>`
+    ).join("")
+}
+
+async function onCreateGenreClick() {
+    const newGenre = { title: "New Genre" }
+    
+    // TODO: Create the new genre on the backend
+}
+
+async function onUpdateGenreClick() {
+    const idToUpdate = genreIdTextbox.value
+    const updatedGenreData = { title: "Updated Genre" }
+    
+    // TODO: Update the genre with the idToUpdate to have the updatedGenreData
+
+    genreIdTextbox.value = ""
+}
+
+async function onDeleteGenreClick() {
+    const idToDelete = genreIdTextbox.value
+    
+    // TODO: Delete the genre with the idToDelete
+
+    genreIdTextbox.value = ""
+}

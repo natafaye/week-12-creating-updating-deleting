@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 </head>
 <body>
-    <button onclick="onFetchMoviesClick()">Fetch Movies</button>
-    <div id="movies-container"></div>
-    <script src="test.js"></script>
+    <div class="container mt-5">
+        <button onclick="onFetchMoviesClick()" class="btn btn-primary btn-lg">Fetch Movies</button>
+        <button onclick="onCreateMovieClick()" class="btn btn-success mx-3 btn-lg">Create Test Movie</button>
+        <button onclick="onUpdateMovieClick()" class="btn btn-primary btn-lg">Update Test Movie</button>
+        <button onclick="onDeleteMovieClick()" class="btn btn-danger mx-3 btn-lg">Delete Test Movie</button>
+        <div id="movies-container"></div>
+    </div>
+    <script src="index.js"></script>
 </body>
 </html>
